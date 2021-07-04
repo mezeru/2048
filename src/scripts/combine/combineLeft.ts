@@ -4,10 +4,23 @@ export default function(grid) {
         
         for (let j = 3; j > 0; j--) {
     
-            if(grid[i][j].innerHTML == grid[i][j-1].innerHTML){
+            if(grid[i][j].innerHTML == grid[i][j-1].innerHTML && grid[i][j].innerHTML != " "){
                 
                 let total = parseInt(grid[i][j-1].innerHTML) + parseInt(grid[i][j].innerHTML);
                 grid[i][j-1].innerHTML = total;
+
+                grid[i][j-1].animate([
+                    {
+                        opacity:"0"
+                    },
+                    {
+                        opacity:"1"
+                    }
+                ],
+                {
+                    duration:1000
+                })
+
                 grid[i][j].innerHTML = " ";
     
             }

@@ -5,6 +5,17 @@ export default function gen2 (grid) {
 
     if (grid[x][y].innerHTML == " "){
         grid[x][y].innerHTML = "2";
+        grid[x][y].animate([
+            {
+                opacity:"0"
+            },
+            {
+                opacity:"1"
+            }
+        ],
+        {
+            duration:1000
+        })
     }
     else{
         gen2(grid);
