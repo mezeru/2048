@@ -1,4 +1,5 @@
 import createBoard from "./scripts/createBoard";
+import './style.scss'
 import right from "./scripts/movement/right";
 import left from "./scripts/movement/left";
 import down from "./scripts/movement/down"
