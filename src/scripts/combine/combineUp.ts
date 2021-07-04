@@ -1,6 +1,6 @@
 export default function(grid) {
 
-    for (let i = 3; i > 0; i--) {           // Combining nos that are side to side
+    for (let i = 1; i < 4; i++) {           // Combining nos that are side to side
         
         for (let j = 0; j < 4; j++) {
     
@@ -18,7 +18,7 @@ export default function(grid) {
                     }
                 ],
                 {
-                    duration:1000
+                    duration:500
                 })
 
                 grid[i][j].innerHTML = " ";
