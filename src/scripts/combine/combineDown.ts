@@ -6,7 +6,7 @@ export default function(grid) {
     
             if(grid[i][j].innerHTML == grid[i-1][j].innerHTML && grid[i][j].innerHTML != " "){
                 
-                let total = parseInt(grid[i+1][j].innerHTML) + parseInt(grid[i][j].innerHTML);
+                let total = parseInt(grid[i-1][j].innerHTML) + parseInt(grid[i][j].innerHTML);
                 grid[i][j].innerHTML = total;
                 grid[i][j].animate([
                     {
