@@ -1,3 +1,3 @@
 # 2048
 
-Hosted on : 2048-web.netlify.app
+Hosted on : https://2048-web.netlify.app
