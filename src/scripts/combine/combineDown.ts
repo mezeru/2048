@@ -8,7 +8,7 @@ export default function(grid) {
                 
                 let total = parseInt(grid[i+1][j].innerHTML) + parseInt(grid[i][j].innerHTML);
                 grid[i+1][j].innerHTML = total;
-                grid[i][j].innerHTML = "0";
+                grid[i][j].innerHTML = " ";
     
             }
             

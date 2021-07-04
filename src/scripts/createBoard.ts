@@ -14,7 +14,7 @@ export default function(){
             let square;
             square = document.createElement('div');
             square.classList.add('grid-element');
-            square.innerHTML = "0";
+            square.innerHTML = " ";
             board.appendChild(square);
             row.push(square);
             

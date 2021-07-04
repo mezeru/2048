@@ -1,18 +1,21 @@
 body {
   height: 95vh;
-  background-color: grey;
+  background: rgba(139, 128, 128, 0.452);
   padding: 0 5%;
 }
 
 body h1 {
+  color: #2c3e50;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
+  font-size: 3em;
 }
 
 .grid {
   width: 600px;
   height: 600px;
   margin: 0 auto;
-  margin-top: auto;
+  margin-top: 100px;
   background-color: #34495e;
   color: #fff;
   border: 6px solid #2c3e50;
@@ -22,12 +25,14 @@ body h1 {
   -ms-grid-rows: (1fr)[4];
   -ms-grid-columns: (1fr)[4];
       grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+  -webkit-box-shadow: 0px 0px 50px 5px grey;
+          box-shadow: 0px 0px 50px 5px grey;
 }
 
 .grid-element {
   border: 6px solid #2c3e50;
   border-radius: 2px;
-  font-family: Helvetica;
+  font-family: 'Tourney', cursive;
   font-weight: bold;
   font-size: 5em;
   display: -webkit-box;
@@ -39,7 +44,5 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
