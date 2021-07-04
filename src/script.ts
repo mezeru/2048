@@ -10,7 +10,6 @@ import combineLeft from "./scripts/combine/combineLeft";
 import combineUp from "./scripts/combine/combineUp";
 import combineDown from "./scripts/combine/combineDown";
 import checkWin from "./scripts/checkWin";
-import checkLose from "./scripts/checkLose";
 
 const scoreSpan = document.querySelector('.score');
 const board = document.getElementById('board');
@@ -76,19 +75,12 @@ const isWin = () => {
 }
 
 
-const isLose = () => {
-    
-    if (!checkLose(grid)){
-       console.log("lose")
-    }
 
-}
 
 const comCall = () => {
 
     gen2(grid);
     isWin();
-    isLose();
     score = score+1;
     scoreSpan.innerHTML = score.toString();
 
