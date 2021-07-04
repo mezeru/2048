@@ -17,7 +17,9 @@ const scoreSpan = document.querySelector('.score')
 let score = 0;
 let grid = createBoard();
 
-document.addEventListener("keyup",(e) => {
+document.addEventListener("keydown",(e) => {
+
+    e.preventDefault();
 
     if(e.key == 'ArrowLeft' || e.key == 'a'){
         left(grid);
@@ -35,6 +37,7 @@ document.addEventListener("keyup",(e) => {
     }
 
     if(e.key == 'ArrowUp' || e.key == 'w'){
+
         up(grid);
         combineUp(grid);
         up(grid);
@@ -43,6 +46,7 @@ document.addEventListener("keyup",(e) => {
     }
 
     if(e.key == 'ArrowDown' || e.key == 's'){
+
         down(grid);
         combineDown(grid);
         down(grid);
