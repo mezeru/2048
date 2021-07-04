@@ -8,10 +8,9 @@
     "start": "parcel serve ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
-  "devDependencies": {
-    "@parcel/transformer-sass": "2.0.0-beta.3.1"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "@parcel/transformer-sass": "^2.0.0-alpha.3",
     "parcel": "^2.0.0-beta.3.1"
   }
 }
