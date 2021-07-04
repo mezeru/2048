@@ -12,7 +12,9 @@ import combineDown from "./scripts/combine/combineDown";
 import checkWin from "./scripts/checkWin";
 import checkLose from "./scripts/checkLose";
 
-const scoreSpan = document.querySelector('.score')
+const scoreSpan = document.querySelector('.score');
+const board = document.getElementById('board');
+const winner = document.getElementById('winner');
 
 let score = 0;
 let grid = createBoard();
@@ -58,7 +60,10 @@ document.addEventListener("keydown",(e) => {
 const isWin = () => {
     
     if (checkWin(grid)){
-       //win
+        board.style.filter = "blur(15px)";
+        winner.style.animation = "opac 1s";
+        winner.style.opacity = "1";
+
     }
 
 }
@@ -81,3 +86,21 @@ const comCall = () => {
     scoreSpan.innerHTML = score.toString();
 
 }
+
+
+document.querySelector('.newgame').addEventListener("click",()=>{
+
+    for(let i=0 ; i<4 ; i++){
+        for(let j=0 ; j<4 ; j++){
+            grid[i][j].innerHTML = " ";
+        }
+    }
+
+    winner.style.opacity="0";
+    board.style.filter = "blur(0px)";
+    gen2(grid);
+    gen2(grid);
+    score = 0;
+    scoreSpan.innerHTML = score.toString();
+    
+});

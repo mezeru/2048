@@ -12,6 +12,9 @@ body{
     padding: 0 15%;
 }
 
+.main{
+    position: relative;
+}
 
 
 .score-p{
@@ -30,6 +33,7 @@ body{
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     box-shadow: 0px 20px 50px 0px rgb(114, 110, 110);
+    transition: filter 1s ease-in;
 }
 
 .grid-element{
@@ -56,4 +60,71 @@ P{
     margin-top: 50px;
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
     color: #2c3e50;
+}
+
+#winner{
+    opacity: 0;
+    font-size: 6em;
+    width: 100%;
+    color: whitesmoke;
+    position: absolute;
+    font-family: cursive;
+    text-shadow: 0px 0px 50px #7e7b7b ,0px 0px 75px #000,0px 0px 15px #fff;
+    top:40%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    transition: display 1s ease-in;
+}
+
+.newgame{
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    background-color: #34495e;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+    top: 0;
+    left: 65%;
+    box-shadow: 0px 10px 15px -5px grey;
+
+}
+
+@keyframes opac{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.footer{
+    box-shadow: 0px -5px 40px -10px black;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    width: 50%;
+    left: 0;
+    right: 0;
+    padding: 1% 5%;
+    background-color: #34495e;
+
+        span{
+    
+            font-weight: bold;
+        }
+    
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: 50px;
+        font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+        color: #ffffff;
+    
+
 }
