@@ -14,8 +14,7 @@ export default function(grid) {
                         backgroundColor:"white"
                     },
                     {
-                        opacity:"1",
-                        backgroundColor:"none"
+                        opacity:"1"
                     }
                 ],
                 {

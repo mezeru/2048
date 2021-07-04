@@ -14,7 +14,6 @@ export default function gen2 (grid) {
             },
             {
                 opacity:"1",
-                backgroundColor:"none"
             }
         ],
         {

@@ -11,45 +11,41 @@ import combineDown from "./scripts/combine/combineDown";
 import checkWin from "./scripts/checkWin";
 import checkLose from "./scripts/checkLose";
 
+const scoreSpan = document.querySelector('.score')
+
 let score = 0;
 let grid = createBoard();
 
 document.addEventListener("keyup",(e) => {
 
-    if(e.key == 'ArrowLeft'){
+    if(e.key == 'ArrowLeft' || e.key == 'a'){
         left(grid);
         combineLeft(grid);
         left(grid);
-        gen2(grid);
-        isWin();
-        isLose();
+        comCall();
     }
 
-    if(e.key == 'ArrowRight'){
+    if(e.key == 'ArrowRight'  || e.key == 'd'){
         right(grid);
         combineRight(grid);
         right(grid);
-        gen2(grid);
-        isWin();
-        isLose();
+        comCall();
+
     }
 
-    if(e.key == 'ArrowUp'){
+    if(e.key == 'ArrowUp' || e.key == 'w'){
         up(grid);
         combineUp(grid);
         up(grid);
-        gen2(grid);
-        isWin();
-        isLose();
+        comCall();
+
     }
 
-    if(e.key == 'ArrowDown'){
+    if(e.key == 'ArrowDown' || e.key == 's'){
         down(grid);
         combineDown(grid);
         down(grid);
-        gen2(grid);
-        isWin();
-        isLose();
+        comCall();
     }
 
 });
@@ -68,5 +64,15 @@ const isLose = () => {
     if (!checkLose(grid)){
        console.log("lose")
     }
+
+}
+
+const comCall = () => {
+
+    gen2(grid);
+    isWin();
+    isLose();
+    score = score+1;
+    scoreSpan.innerHTML = score.toString();
 
 }
