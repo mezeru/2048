@@ -28,7 +28,7 @@ body{
     margin-top: 25px;
     background-color: #34495e;
     color: #fff;
-    border: 6px solid #2c3e50;
+    border: 10px solid #2c3e50;
     border-radius: 10px;
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
@@ -37,8 +37,8 @@ body{
 }
 
 .grid-element{
-    border: 6px solid #2c3e50;
-    border-radius: 2px;
+    border: 10px solid #2c3e50;
+    border-radius: 5px;
     font-family: 'Tourney', cursive;
     font-weight: bold;
     font-size: 5em;

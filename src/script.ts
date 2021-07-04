@@ -18,10 +18,14 @@ const winner = document.getElementById('winner');
 
 let score = 0;
 let grid = createBoard();
+let won = false;
 
 document.addEventListener("keydown",(e) => {
+    
 
     e.preventDefault();
+
+  if(!won){  
 
     if(e.key == 'ArrowLeft' || e.key == 'a'){
         left(grid);
@@ -55,15 +59,18 @@ document.addEventListener("keydown",(e) => {
         comCall();
     }
 
+  }
+
 });
 
 const isWin = () => {
     
     if (checkWin(grid)){
+        won = true;
         board.style.filter = "blur(15px)";
         winner.style.animation = "opac 1s";
         winner.style.opacity = "1";
-
+        
     }
 
 }
@@ -102,5 +109,6 @@ document.querySelector('.newgame').addEventListener("click",()=>{
     gen2(grid);
     score = 0;
     scoreSpan.innerHTML = score.toString();
+    won = false;
     
 });
