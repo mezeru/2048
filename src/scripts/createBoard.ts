@@ -5,7 +5,7 @@ export default function(){
 
     let grid = [];
 
-    for(let i=0;i<4;i++){
+    for(let i=0 ; i<4; i++){
         
         let row = [];        
         

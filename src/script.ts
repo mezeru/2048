@@ -1,4 +1,8 @@
 import createBoard from "./scripts/createBoard";
-let grid = createBoard();
+import right from "./scripts/movement/right";
+import left from "./scripts/movement/left";
+import down from "./scripts/movement/down"
+import up from "./scripts/movement/up";
 
-console.log(grid);
+let grid = createBoard();
+up(grid);
