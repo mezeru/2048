@@ -11,15 +11,17 @@ export default function(grid) {
 
                 grid[i-1][j].animate([
                     {
-                        opacity:"0"
+                        opacity:"0",
+                        backgroundColor:"white"
                     },
                     {
-                        opacity:"1"
+                        opacity:"1",
+                        backgroundColor:"none"
                     }
                 ],
                 {
-                    duration:500
-                })
+                    duration:700
+                });
 
                 grid[i][j].innerHTML = " ";
     

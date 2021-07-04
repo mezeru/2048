@@ -10,14 +10,16 @@ export default function(grid) {
                 grid[i][j].innerHTML = total;
                 grid[i][j].animate([
                     {
-                        opacity:"0.2"
+                        opacity:"0",
+                        backgroundColor:"white"
                     },
                     {
-                        opacity:"1"
+                        opacity:"1",
+                        backgroundColor:"none"
                     }
                 ],
                 {
-                    duration:500
+                    duration:700
                 });
                 grid[i-1][j].innerHTML = " ";
     

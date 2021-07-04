@@ -1,4 +1,6 @@
 export default function gen2 (grid) {
+   
+    try{
     
     let x = Math.floor(Math.random()*4);
     let y = Math.floor(Math.random()*4);
@@ -7,10 +9,12 @@ export default function gen2 (grid) {
         grid[x][y].innerHTML = "2";
         grid[x][y].animate([
             {
-                opacity:"0"
+                opacity:"0.5",
+                backgroundColor:"black"
             },
             {
-                opacity:"1"
+                opacity:"1",
+                backgroundColor:"none"
             }
         ],
         {
@@ -19,6 +23,11 @@ export default function gen2 (grid) {
     }
     else{
         gen2(grid);
+    }
+
+    }
+    catch{
+        null;
     }
     
 

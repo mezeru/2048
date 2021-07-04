@@ -25,8 +25,8 @@ body h1 {
   -ms-grid-rows: (1fr)[4];
   -ms-grid-columns: (1fr)[4];
       grid-template: repeat(4, 1fr)/repeat(4, 1fr);
-  -webkit-box-shadow: 0px 0px 50px 5px grey;
-          box-shadow: 0px 0px 50px 5px grey;
+  -webkit-box-shadow: 0px 70px 50px 0px grey;
+          box-shadow: 0px 70px 50px 0px grey;
 }
 
 .grid-element {
@@ -44,23 +44,5 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@-webkit-keyframes opac {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opac {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 /*# sourceMappingURL=style.css.map */
