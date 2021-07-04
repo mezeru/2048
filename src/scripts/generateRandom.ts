@@ -10,4 +10,5 @@ export default function gen2 (grid) {
         gen2(grid);
     }
     
+
 }
