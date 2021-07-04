@@ -8,7 +8,9 @@ import combineRight from "./scripts/combine/combineRight";
 import combineLeft from "./scripts/combine/combineLeft";
 import combineUp from "./scripts/combine/combineUp";
 import combineDown from "./scripts/combine/combineDown";
+import checkWin from "./scripts/checkWin";
 
+let score = 0;
 let grid = createBoard();
 
 document.addEventListener("keyup",(e) => {
@@ -18,6 +20,7 @@ document.addEventListener("keyup",(e) => {
         combineLeft(grid);
         left(grid);
         gen2(grid);
+        isWin();
     }
 
     if(e.key == 'ArrowRight'){
@@ -25,6 +28,7 @@ document.addEventListener("keyup",(e) => {
         combineRight(grid);
         right(grid);
         gen2(grid);
+        isWin();
     }
 
     if(e.key == 'ArrowUp'){
@@ -32,6 +36,7 @@ document.addEventListener("keyup",(e) => {
         combineUp(grid);
         up(grid);
         gen2(grid);
+        isWin();
     }
 
     if(e.key == 'ArrowDown'){
@@ -39,6 +44,15 @@ document.addEventListener("keyup",(e) => {
         combineDown(grid);
         down(grid);
         gen2(grid);
+        isWin();
     }
 
 });
+
+const isWin = () => {
+    
+    if (checkWin(grid)){
+       //win
+    }
+
+}
