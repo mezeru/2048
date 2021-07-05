@@ -15,7 +15,7 @@ export default function(grid) {
                     targets:grid[i-1][j],
                     scale:1.2,
                     direction:'alternate',
-                    duration:200,
+                    duration:100,
                     easing: 'easeInOutSine'
                 })
 
