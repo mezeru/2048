@@ -1,3 +1,5 @@
+import anime from 'animejs';
+
 export default function (grid) {
 
     for(let i = 0 ; i < 4 ; i++){
@@ -9,10 +11,10 @@ export default function (grid) {
 
         let final = nonZero.concat(empty);  // Set elements to extreme right
         
-        for (let j = 0; j < 4; j++) {       // Reflect Changes on DOM
-            
+        for (let j = 0; j < 4; j++) {       // Reflect Changes on DOM            
             grid[i][j].innerHTML = final[j];
             
+
         }
         
     }

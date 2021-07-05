@@ -1,3 +1,5 @@
+import anime from "animejs";
+
 export default function(grid) {
 
     for (let i = 3; i > 0; i--) {           // Combining nos that are side to side
@@ -8,18 +10,16 @@ export default function(grid) {
                 
                 let total = parseInt(grid[i-1][j].innerHTML) + parseInt(grid[i][j].innerHTML);
                 grid[i][j].innerHTML = total;
-                grid[i][j].animate([
-                    {
-                        opacity:"0",
-                        backgroundColor:"white"
-                    },
-                    {
-                        opacity:"1"
-                    }
-                ],
-                {
-                    duration:700
-                });
+                
+                anime({
+                    targets:grid[i][j],
+                    scale:1.2,
+                    direction:'alternate',
+                    duration:200,
+                    easing: 'easeInOutSine'
+                })
+
+
                 grid[i-1][j].innerHTML = " ";
     
             }

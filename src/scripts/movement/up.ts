@@ -1,3 +1,5 @@
+
+
 export default function (grid) {
 
     for(let i = 0 ; i < 4 ; i++){
@@ -12,6 +14,8 @@ export default function (grid) {
         for (let j = 0; j < 4; j++) {       // Reflect Changes on DOM
             
             grid[j][i].innerHTML = final[j];
+
+
             
         }
         

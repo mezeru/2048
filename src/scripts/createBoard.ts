@@ -5,16 +5,19 @@ export default function(){
 
     let grid = [];
 
+    let id = 0;
+
     for(let i=0 ; i<4; i++){
         
         let row = [];        
         
         for (let j=0; j<4; j++) {
-
+            id++;
             let square;
             square = document.createElement('div');
             square.classList.add('grid-element');
             square.innerHTML = " ";
+            square.id = id;
             board.appendChild(square);
             row.push(square);
             
